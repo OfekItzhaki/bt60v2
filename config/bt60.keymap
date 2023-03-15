@@ -11,19 +11,6 @@
 
 
 / {
-	behaviors {
-        td_func: tap_dance_my {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_FUNC;
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings =
-				<&mo RAISE>,
-				<&trans>,
-				<&mo ACTIONS>;
-        };
-    };
-	
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -41,7 +28,7 @@
 				&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I     &kp  O  &kp  P   &kp LBKT &kp RBKT   &kp BSLH
 				&lt RAISE CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp  K   &kp  L  &kp SEMI &kp SQT            &lt RAISE ENTER
 				&kp LSHFT   &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH                   &kp RSHFT
-				&kp LCTRL &kp LGUI &kp LALT            &kp SPACE                         &kp RALT &kp C_MENU &kp RCTRL &tap_dance_my
+				&kp LCTRL &kp LGUI &kp LALT            &kp SPACE                         &kp RALT &kp C_MENU &kp RCTRL &mo DEFAULT
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
