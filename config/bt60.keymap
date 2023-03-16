@@ -7,6 +7,7 @@
 #define DEFAULT 0
 #define RAISE 1
 #define ACTIONS 2
+#define BLANK 3
 
 
 
@@ -17,7 +18,7 @@
             label = "TAP_DANCE_FUNC";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo RAISE>, <&trans>, <&tog ACTIONS>;
+            bindings = <&mo RAISE>, <&trans>, <&tog ACTIONS>, <&tog BLANK>;
         };
 	};
 
@@ -28,7 +29,7 @@
 				// ------------------------------------------------------------------------------------------
 				// |  `  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP
 				// | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   |
-				// | 1  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     1
+				// | 1  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     
 				// |  SHIFT    |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | UP   |      SHIFT
 				// |  CTL  |  WIN  |  ALT  |            SPACE               | Left | Down  |  Right  |  /
 				// ------------------------------------------------------------------------------------------
@@ -56,11 +57,22 @@
 
 		actions_layer {
 			bindings = <
-				&bootloader &trans  &trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans &trans &trans 	&reset
+				&trans 		&tog DEFAULT  	&trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans &trans &trans 	&bootloader
+				&trans  	&trans  		&trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans &trans &trans 	&trans
+				&trans  	&trans  		&trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans &trans 	     	&rgb_ug RGB_TOG
+				&trans  	&trans  		&trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans 				 	&trans
+				&trans  	&trans  		&trans            			&reset                 	 &trans &trans &trans 			&trans
+			>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+		};
+
+		blank_layer {
+			bindings = <
+				&trans 		&trans  &trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans &trans &trans 	&trans
 				&trans  	&trans  &trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans &trans &trans 	&trans
-				&trans  	&trans  &trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans &trans 	     	&rgb_ug RGB_TOG
+				&trans  	&trans  &trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans &trans 	     	&trans
 				&trans  	&trans  &trans  &trans  &trans  &trans &trans  &trans &trans &trans &trans 				 	&trans
-				&trans  	&trans  &trans            &trans                      		 &trans &trans &trans 			&tog DEFAULT
+				&trans  	&trans  &trans            			&trans             		 &trans &trans &trans 			&mo ACTIONS
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
