@@ -9,9 +9,6 @@
 #define ACTIONS 2
 #define BLANK 3
 
-
-
-
 / {
 	behaviors {
         td_func: tap_dance_func {
