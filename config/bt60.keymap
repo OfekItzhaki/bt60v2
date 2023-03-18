@@ -24,7 +24,7 @@
             label = "TAP_DANCE_BLANK";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&tog RAISE>, <&none>, <&none>, <&tog RAISE>;
+            bindings = <&none>, <&trans>;
         };
 	};
 
@@ -74,11 +74,11 @@
 
 		blank_layer {
 			bindings = <
-				&none 	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&none
+				&none 	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&td_blank
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none 	     	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none 				&none
-				&none  	&none  &none            	&none             	  	 &none &none &none 			&tog ACTIONS
+				&none  	&none  &none            	&none             	  	 &none &none &none 			&none
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
