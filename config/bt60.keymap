@@ -78,7 +78,7 @@
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none 	     	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none 				&none
-				&none  	&none  &none            	&none             	  	 &none &none &none 			&reset
+				&none  	&none  &none            	&none             	  	 &none &none &none 			&tog ACTIONS
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
