@@ -70,7 +70,7 @@
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none 	     	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none 				&none
-				&none  	&none  &none            	&none             	  	 &none &none &none 			&mo ACTIONS
+				&none  	&none  &none            	&trans             	  	 &none &none &none 			&mo ACTIONS
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
