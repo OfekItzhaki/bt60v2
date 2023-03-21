@@ -26,6 +26,14 @@
             tapping-term-ms = <200>;
             bindings = <&none>, <&reset>;
         };
+
+		up_qm: arrow_up_and_question_mark {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ARROW_UP_AND_QUESTION_MARK";
+            #binding-cells = <0>;
+            bindings = <&kp UP>, <&kp QUESTION>;
+			mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;	
+        };
 	};
 
 	keymap {
