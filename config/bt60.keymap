@@ -31,7 +31,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "ARROW_UP_AND_QUESTION_MARK";
             #binding-cells = <0>;
-            bindings = <&kp UP>, <&kp FSLH>;
+            bindings = <&kp UP>, <&kp QUESTION>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;	
         };
 	};
@@ -63,7 +63,7 @@
 				&bt BT_CLR 	&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp DEL
 				&kp ENTER 	&kp HOME &kp UP &kp END &trans &trans &trans &trans &kp PG_UP &trans &kp PSCRN &trans &trans &trans
 				&trans 	&kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &kp HOME &kp PG_DN &kp END &trans  &trans   &trans
-				&kp C_PREV 	&kp C_NEXT &trans &kp C_MUTE &bl BL_INC &bl BL_DEC &trans &trans &trans &trans &kp FSLH  &bl BL_TOG
+				&kp C_PREV 	&kp C_NEXT &trans &kp C_MUTE &bl BL_INC &bl BL_DEC &trans &trans &trans &trans &kp SLASH  &bl BL_TOG
 				&bt BT_PRV 	&bt BT_NXT  &trans              &kp C_PLAY_PAUSE                            &kp RALT   &kp C_MENU   &kp RCTRL &trans
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
