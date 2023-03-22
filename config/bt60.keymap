@@ -31,7 +31,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "ARROW_UP_AND_QUESTION_MARK";
             #binding-cells = <0>;
-            bindings = <&kp UP>, <&kp FSLH>;
+            bindings = <&kp UP>, <&kp DOWN>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;	
         };
 	};
