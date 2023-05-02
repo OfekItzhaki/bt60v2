@@ -18,14 +18,6 @@
             tapping-term-ms = <200>;
             bindings = <&mo RAISE>, <&mo RAISE>, <&mo ACTIONS>, <&tog BLANK>;
         };
-
-		td_blank: tap_dance_blank {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_BLANK";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&reset>;
-        };
 	};
 
 	keymap {
@@ -74,7 +66,7 @@
 
 		blank_layer {
 			bindings = <
-				&none 	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&td_blank
+				&none 	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&trans
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none 	     	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none 				&none
