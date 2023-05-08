@@ -23,8 +23,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_BLANK";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&sys_reset>;
+            tapping-term-ms = <200>;                 
+            bindings = <&none>, <&mo ACTIONS>;
         };
 	};
 
@@ -74,11 +74,11 @@
 
 		blank_layer {
 			bindings = <
-				&none 	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&td_blank
+				&none 	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none &none 	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none &none 	     	&none
 				&none  	&none  &none  &none  &none  &none &none  &none &none &none &none 				&none
-				&none  	&none  &none            	&none             	  	 &none &none &none 			&none
+				&none  	&none  &none            	&none             	  	 &none &tap_dance_blank &none &none
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
